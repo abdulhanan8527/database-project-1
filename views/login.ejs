@@ -1,5 +1,8 @@
 <h1>Login</h1>
-<form action="/register" method="POST">
+<% if(messages.error) {%>
+    <%= messages.error %>  
+<% } %> 
+<form action="/login" method="POST">
     <div>
         <label for="username">Username: </label>
         <input type="text" id="username" name="username" required>
