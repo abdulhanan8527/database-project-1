@@ -7,7 +7,7 @@ body{
     justify-content: center;
     align-items: center;
 }
-#registration{
+.login{
     width: 250px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     text-align: center;
@@ -44,8 +44,6 @@ button:hover {
 }
 a{
     text-decoration: none;
-    vertical-align: 10px;
-    margin-left: -220px;
 }
 h1{
     color:  #ed3330;
