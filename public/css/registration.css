@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani&display=swap');
+*{
+    font-family: 'Rajdhani', sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#registration{
+    width: 250px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    align-items: center;
+}
+.input{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    padding: 5px;
+}
+label{
+    left: -15px;
+}
+input{
+    right: -15px;
+}
+button{
+    color: #fff !important;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #ed3330;
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
+    border: none;
+    transition: all 0.4s ease 0s;
+    margin: 5px;
+}
+button:hover {
+    background: #434343;
+    letter-spacing: 1px;
+    -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+    transition: all 0.4s ease 0s;
+}
+a{
+    text-decoration: none;
+    vertical-align: 10px;
+    margin-left: -220px;
+}
+h1{
+    color:  #ed3330;
+}

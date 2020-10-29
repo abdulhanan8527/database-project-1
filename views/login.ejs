@@ -1,16 +1,21 @@
-<h1>Login</h1>
-<% if(messages.error) {%>
-    <%= messages.error %>  
-<% } %> 
-<form action="/login" method="POST">
-    <div>
-        <label for="username">Username: </label>
-        <input type="text" id="username" name="username" required>
-    </div>
-    <div>
-        <label for="password">Password: </label>
-        <input type="password" id="password" name="password" required>
-    </div>
-    <button type="submit" id='login'>Login</button>
-</form>
-<p>Don't Have an Account? <a href="/register">Sign Up</a></p>
+<head>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <h1>Login</h1>
+    <% if(messages.error) {%>
+        <%= messages.error %>  
+    <% } %> 
+    <form action="/login" method="POST">
+        <div>
+            <label for="username">Username: </label>
+            <input type="text" id="username" name="username" required>
+        </div>
+        <div>
+            <label for="password">Password: </label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <button type="submit" id='login'>Login</button>
+    </form>
+    <p>Don't Have an Account? <a href="/register">Sign Up</a></p>
+</body>
