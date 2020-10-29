@@ -18,7 +18,7 @@ const users = []
 const bcrypt = require('bcrypt')
 const passport = require('passport')
 const initializePassport= require('./passport-config')
-const { authenticate } = require('passport')
+
 initializePassport(
     passport,
     username => users.find(user => user.username === username),
