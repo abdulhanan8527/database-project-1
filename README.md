@@ -1,7 +1,8 @@
 # database-project
-```npm run ashr``` //to run application
+## to run application
+```npm run ashr```
  
-# packages to install
+## packages to install
 * ```npm install express```
 * ```npm --save-dev nodemon dotenv```
 * ```npm install bcrypt```
