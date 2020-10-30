@@ -5,6 +5,22 @@ if(process.env.NODE_ENV !== 'production'){
 const http = require('http')
 const fs = require('fs')
 const port = 3000
+const mongoDB = require('mongodb').MongoClient
+const url = "mongodb+srv://sajiidx:helloworld@cluster0.uucbi.mongodb.net/database-project?retryWrites=true&w=majority"
+mongoDB.connect(url, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+  }, (err, client) => {
+  if (err) {
+    console.error(err)
+    return
+  }
+  else{
+    
+    console.log('Connected to mongoDB...')
+  }
+})
+const client = new mongoDB(url, { useNewUrlParser: true });
 
 const express = require('express')
 const path = require('path')
@@ -100,6 +116,18 @@ app.post('/register', checkNotAuthenticated, async function(req, res){
         const hashedPassword = await bcrypt.hash(req.body.password, salt) //if we replace salt by 10 nothing will change
         const user = {id: Date.now().toString(), firstname: req.body.firstname, lastname: req.body.lastname, username: req.body.username, email: req.body.email, password: hashedPassword}
         users.push(user)
+        client.connect(err => {
+            const collection = client.db("customers").collection("Users");
+            collection.insertOne(user,(err, result) => {
+                if(err){
+                    console.log(err)
+                }
+                else{
+                    console.log("Successfully Registered!")
+                }
+            })
+            client.close();
+          });
         res.redirect('/login')
         //res.status(201).send()
     }
